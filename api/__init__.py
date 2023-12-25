@@ -1,9 +1,10 @@
 """Root API."""
-from fastapi import FastAPI
+from fastapi import FastAPI, Security
 
 import random
 
 from api.models import Candle
+from api.auth import check_authorized_requester
 
 
 app = FastAPI(
@@ -19,7 +20,7 @@ async def root():
     return "API is alive and well."
 
 
-@app.get("/candle")
+@app.get("/candle", dependencies=[Security(check_authorized_requester)])
 async def candle() -> Candle:
     """Get the latest candle data. Mocked currently."""
     return Candle(
