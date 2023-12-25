@@ -1,0 +1,10 @@
+__pycache__/
+
+win_venv/
+venv/
+
+.vscode
+test.ipynb
+script.py
+
+keys.yaml

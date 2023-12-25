@@ -1,0 +1,1 @@
+"""Market candle infrastructure."""
