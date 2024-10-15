@@ -64,4 +64,4 @@ jobs:
           no_traffic: false
           
       - name: Allocate traffic to latest deployment
-        run: gcloud run services update-traffic --region us-central1 --to-latest techbuzz-backend
+        run: gcloud run services update-traffic --region us-central1 --to-latest market-candle
